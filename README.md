@@ -30,3 +30,7 @@ Organizaremos cada 'setor' do nosso projeto, organizando os passos por commits (
 _**Estilo default**_
 
 Vamos criar um estilo default no arquivo `App.css`, para que possamos visualizar melhor o produto final.
+
+_**Criando nossas rotas**_
+
+Agora precisamos definir nossas rotas (qual URL carrega que componente). Em seguida criaremos todos esses componentes.
