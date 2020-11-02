@@ -1,4 +1,5 @@
 # react-routes-practice
+
 Prática para melhor compreensão do pacote **react-router-dom**. O projeto consiste em um **blog** simples.
 
 # Passo a Passo da prática
@@ -15,9 +16,9 @@ Certifique-se que possui o **node.js** instalado em seu ambiente local. Execute 
 
 Então devemos criar o projeto react com o comando `npx create-react-app frontend` (sendo 'frontend' o nome do projeto/pasta que será criado).
 
-Após a instalação do projeto, vamos acessar a pasta criada (`cd frontend`) e instalar o pacote **react-router-dom**, com o comando `npm install react-router-dom` ou `yarn add react-router-dom` (se estiver usando _yarn_).
+Após a instalação do projeto, vamos acessar a pasta criada ( `cd frontend` ) e instalar o pacote **react-router-dom**, com o comando `npm install react-router-dom` ou `yarn add react-router-dom` (se estiver usando _yarn_).
 
-Finalizada a instalação, podemos abrir uma nova janela de terminal, acessar nossa pasta 'frontend' e rodar `npm start` ou `yarn start`. Automaticamente será aberta uma nova aba no ambiente local, porta 3000 (`localhost:3000`), com a página _default_ do projeto React.js.
+Finalizada a instalação, podemos abrir uma nova janela de terminal, acessar nossa pasta 'frontend' e rodar `npm start` ou `yarn start` . Automaticamente será aberta uma nova aba no ambiente local, porta 3000 ( `localhost:3000` ), com a página _default_ do projeto React.js.
 
 Com isso estamos prontos para prosseguirmos. Antes de mergearmos com a branch main, uma rápida limpeza nos arquivos e estilos.
 
@@ -29,8 +30,12 @@ Organizaremos cada 'setor' do nosso projeto, organizando os passos por commits (
 
 _**Estilo default**_
 
-Vamos criar um estilo default no arquivo `App.css`, para que possamos visualizar melhor o produto final.
+Vamos criar um estilo default no arquivo `App.css` , para que possamos visualizar melhor o produto final.
 
 _**Criando nossas rotas**_
 
 Agora precisamos definir nossas rotas (qual URL carrega que componente). Em seguida criaremos todos esses componentes.
+
+_**Importando nosso componente Routes**_
+
+Dentro do `App.js` , vamos importar o componente Routes ( `routes.js` , criado no passo anterior)
