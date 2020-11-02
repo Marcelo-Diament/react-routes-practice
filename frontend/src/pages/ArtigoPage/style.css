@@ -1,0 +1,66 @@
+.main .aside-nav {
+  border: 1px solid rgba(0, 183, 255, .4);
+  border-radius: 16px;
+  box-shadow: 0 0 8px rgba(0, 183, 255, .2);
+  margin: 16px auto;
+  padding: 16px 0;
+}
+
+.main .aside-nav .aside-nav-title {
+  margin: 0 0 20px;
+  padding: 0;
+  text-align: center;
+}
+
+.main .aside-nav .aside-nav-articles {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.main .aside-nav .aside-nav-articles .aside-nav-articles-item {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 183, 255, 0);
+  border-top: 1px solid rgba(0, 183, 255, 0);
+  margin: 0;
+  padding: 16px;
+  transition: all .6s ease-in-out, background-color .3s ease-in-out .3s;
+  width: 100%;
+}
+
+.main .aside-nav .aside-nav-articles .aside-nav-articles-item:hover {
+  background-color: var(--chumbo-azulado);
+  border-bottom: 1px solid rgba(0, 183, 255, .8);
+  border-top: 1px solid rgba(0, 183, 255, .8);
+}
+
+.main .aside-nav .aside-nav-articles .aside-nav-articles-item .aside-nav-articles-item-title {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.main .aside-nav .aside-nav-articles .aside-nav-articles-item .aside-nav-articles-item-intro {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.main .aside-nav .aside-nav-articles .aside-nav-articles-item .aside-nav-articles-item-link {
+  display: block;
+  width: fit-content;
+}
+
+.main .aside-nav-topics {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* .main .aside-nav-topics-item {
+  margin: 4px;
+} */
