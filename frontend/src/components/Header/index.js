@@ -7,7 +7,7 @@ import {
 import logo from '../../logo.svg'
 import './style.css'
 
-const Header = () => {
+const Header = ({ currentDevice }) => {
   let location = useLocation()
   let history = useHistory()
   const [isMenuActive, setisMenuActive] = useState(false)
@@ -18,9 +18,12 @@ const Header = () => {
     setisMenuActive(false)
   }, [location])
 
+  let isMobile = currentDevice === 'mobile',
+    isTablet = currentDevice === 'tablet'
+
   return (
-    <header className={`header ${isMenuActive ? 'active' : ''}`}>
-      <div className="header-status-toggler" onClick={() => setisMenuActive(!isMenuActive)}></div>
+    <header className={`header ${isMenuActive && (isMobile || isTablet) ? 'active' : ''} ${currentDevice}`}>
+      <div className="header-status-toggler" onClick={() => setisMenuActive(!isMenuActive)} title={`${!isMenuActive ? 'Abrir Menu' : 'Fechar Menu'}`}></div>
       <Link to="/" className="header-logo">
         <img src={logo} className="header-logo-img spin" alt="logo" />
         <div className="header-logo-brand">

@@ -131,3 +131,5 @@ Vamos 'quebrar' o componente Vitrine em mais um componente, Card. Ele receberá 
 Para melhorarmos nosso projeto, antes vamos incluir a feature 'detectDevice' - que reconhece a largura disponível para o site e é atualizada a cada alteração no tamanho da tela reservada ao site.
 
 Para detectarmos a real largura da tela, utilizaremos a propriedade `innerWidth` da `window` e compararemos com alguns breakpoits por nós definidos - ao compararmos a `innerWidth` com nossos breakpoints, definimos o dispositivo em uso (de acordo com a largura/resolução, e não com o dispositivo de fato). Para mantermos os valores atualizados, adicionaremos um `eventListener` atrelado ao evento do tipo `resize` da `window`.
+
+_Nessa branch também resolvemos um pequeno bug causado por um link inexistente._
