@@ -7,8 +7,7 @@ const HomePage = () => {
   const topics = getTopics()
   return (
     <>
-      <PageHeader title="Página Inicial" intro="Página principal, com as novidades e destaques" />
-      <h1>Home Page</h1>
+      <PageHeader title="Home" intro="Um site focado em práticas de React. Confira os tópicos a seguir e seus artigos!" />
       {topics.map((topic, index) => <Vitrine {...topic} key={index} />)}
     </>
   )

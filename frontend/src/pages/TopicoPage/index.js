@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import PageHeader from '../../components/PageHeader'
 import Vitrine from '../../components/Vitrine'
-import {cleanString} from '../../utils'
+import { cleanString } from '../../utils'
 import { getTopics, getTopicsByName } from '../../api'
 import { useParams, Link } from 'react-router-dom'
 import './style.css'

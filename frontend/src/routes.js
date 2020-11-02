@@ -5,11 +5,11 @@ import {
   Route,
 } from 'react-router-dom'
 import Header from './components/Header'
+import ArtigoPage from './pages/ArtigoPage'
 import HomePage from './pages/HomePage'
 import SobrePage from './pages/SobrePage'
-import TopicosPage from './pages/TopicosPage'
 import TopicoPage from './pages/TopicoPage'
-import ArtigoPage from './pages/ArtigoPage'
+import TopicosPage from './pages/TopicosPage'
 
 const Routes = () => {
   return (

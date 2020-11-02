@@ -1,6 +1,6 @@
 import articlesPlaceholderJson from './articles-placeholder.json'
 import topicsPlaceholderJson from './topics-placeholder.json'
-import {cleanString} from '../utils'
+import { cleanString } from '../utils'
 
 const placeholder = {
   articles: articlesPlaceholderJson,

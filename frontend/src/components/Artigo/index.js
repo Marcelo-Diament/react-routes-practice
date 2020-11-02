@@ -24,7 +24,7 @@ const Artigo = (activeArticle) => {
         {
           image === ''
             ? (
-              <div className="article-item-header-image" style={{ backgroundImage: `url('${logo}')`, backgroundSize: 240  }}></div>
+              <div className="article-item-header-image" style={{ backgroundImage: `url('${logo}')`, backgroundSize: 240 }}></div>
             )
             : (
               <div className="article-item-header-image" style={{ backgroundImage: `url('${image}')` }}></div>

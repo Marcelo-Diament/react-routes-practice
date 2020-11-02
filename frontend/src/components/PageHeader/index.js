@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css'
 
-const PageHeader = ({title, intro}) => {
+const PageHeader = ({ title, intro }) => {
   return (
     <header className="main-header">
       <h1 className="main-header-title">{title}</h1>
