@@ -22,6 +22,8 @@ Finalizada a instalação, podemos abrir uma nova janela de terminal, acessar no
 
 Com isso estamos prontos para prosseguirmos. Antes de mergearmos com a branch main, uma rápida limpeza nos arquivos e estilos.
 
+## Passo 02 | Estrutura
+
 **Branch: feature/002-project-structure**
 
 Essa branch/passo tem como responsabilidade a **estruturação inicial do projeto** (separar as rotas de páginas, de componentes...).
@@ -96,3 +98,13 @@ const cleanString = (string, spaceToHyphen = false, keepHyphen = true) => {
 }
 ```
 Como exportaremos outras funções auxiliares posteriormente, a exportamos assim: `export { cleanString }`. Logo, para utilizá-la basta fazer a importação assim: `import { cleanString } from './utils'` (de acordo com o caminho até o arquivo).
+
+## Passo 03 | Componentes Básicos
+
+**Branch: feature/003-basic-components**
+
+Nessa branch serão criados componentes básicos como uma vitrine de cards, o card, um cabeçalho padrão para as páginas e um componente de artigo (que posteriormente poderemos quebrar em pedaços menores).
+
+**PageHeader - cabeçalho de página**
+
+Basicamente criamos o componente, o preparamos para receber um título e uma introdução e criamos seu estilo. Então importamos o componente nas páginas do projeto.
