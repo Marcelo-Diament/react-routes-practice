@@ -11,7 +11,7 @@ Essa branch/passo tem como responsabilidade a **instalação das dependências**
 
 Certifique-se que possui o **node.js** instalado em seu ambiente local. Execute `node -v` no terminal de sua perferência para verificar a versão instalada.
 
-!['Versão node']('./passo-a-passo-01-01-versao-node.png')
+!['Versão node']('https://github.com/Marcelo-Diament/react-routes-practice/blob/main/passo-a-passo-01-01-versao-node.png')
 
 Então devemos criar o projeto react com o comando `npx create-react-app frontend` (sendo 'frontend' o nome do projeto/pasta que será criado).
 
@@ -20,3 +20,13 @@ Após a instalação do projeto, vamos acessar a pasta criada (`cd frontend`) e 
 Finalizada a instalação, podemos abrir uma nova janela de terminal, acessar nossa pasta 'frontend' e rodar `npm start` ou `yarn start`. Automaticamente será aberta uma nova aba no ambiente local, porta 3000 (`localhost:3000`), com a página _default_ do projeto React.js.
 
 Com isso estamos prontos para prosseguirmos. Antes de mergearmos com a branch main, uma rápida limpeza nos arquivos e estilos.
+
+**Branch: feature/002-project-structure**
+
+Essa branch/passo tem como responsabilidade a **estruturação inicial do projeto** (separar as rotas de páginas, de componentes...).
+
+Organizaremos cada 'setor' do nosso projeto, organizando os passos por commits (para maior facilidade na hora de revisarmos o que foi feito).
+
+_**Estilo default**_
+
+Vamos criar um estilo default no arquivo `App.css`, para que possamos visualizar melhor o produto final.

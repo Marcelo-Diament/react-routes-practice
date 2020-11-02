@@ -1,37 +1,114 @@
-.App {
-  text-align: center;
+:root {
+  --azul: #61dafb;
+  --branco: #ffffff;
+  --chumbo: #282c34;
+  --chumbo-azulado: #1c2331;
+  --chumbo-escuro: #1e2127;
+  --chumbo-rosado: #311c28;
+  --cinza: #c3c3c3;
+  --rosa: #fb61ae;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+html,
+body,
+#root,
+#root .App {
+  margin: 0;
   min-height: 100vh;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+#root .App {
+  align-items: stretch;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+#root .App .main {
+  background-color: var(--chumbo-escuro);
+  color: var(--azul);
+  margin: 96px 0 0;
+  min-height: calc(100vh - 96px);
+  padding: 16px;
+  transition: color .01s linear 0;
 }
 
-@keyframes App-logo-spin {
+#root .App .header.active+.main {
+  color: transparent;
+}
+
+#root .App h1 {
+  color: var(--branco);
+  font-size: 24px;
+  height: 48px;
+  line-height: 32px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  text-align: center;
+  width: 100%;
+}
+
+#root .App ul {
+  list-style: none;
+}
+
+#root .App a {
+  color: var(--branco);
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+#root .App a:hover,
+#root .App a.active {
+  color: var(--azul);
+  filter: drop-shadow(0 0 2px rgba(0, 183, 255, .66));
+}
+
+#root .App code {
+  color: var(--azul);
+  margin: 16px auto;
+  padding: 16px;
+  width: 100%;
+}
+
+#root .App button,
+#root .App .btn {
+  background-color: transparent;
+  border: 1px solid rgba(0, 183, 255, .8);
+  border-radius: 24px;
+  box-shadow: 0 0 2px rgba(0, 183, 255, .8);
+  color: var(--azul) !important;
+  filter: brightness(1);
+  margin: 8px 0 8px auto;
+  padding: 8px 16px;
+}
+
+#root .App button:hover,
+#root .App .btn:hover {
+  background-color: var(--azul);
+  border: 1px solid rgba(0, 183, 255, .4);
+  box-shadow: 0 0 2px rgba(0, 183, 255, .4);
+  color: var(--chumbo) !important;
+  filter: brightness(1.2);
+}
+
+#root .App .spin {
+  animation: spin 9s infinite linear;
+}
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
