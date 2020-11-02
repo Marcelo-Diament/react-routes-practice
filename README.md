@@ -34,29 +34,43 @@ Essa branch/passo tem como responsabilidade a **estruturação inicial do projet
 
 Basicamente a estrutura consiste nas pastas:
 
+![API](https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-01-api.png)
+
 **src/api**
 
 Onde serão armazenados arquivos que interajam com API e executem requests. No caso tempos arquivos JSON com conteúdo de marcação, por enquanto.
+
+![Components](https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-02-components.png)
 
 **src/components**
 
 Pasta dos componentes, que serão (re)utilizados em diferentes páginas e componentes do projeto.
 
+![Pages](https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-03-pages.png)
+
 **src/pages**
 
 Local das páginas, que serão chamadas de acordo com as rotas e renderizarão os respectivos componentes.
+
+![Utils](https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-04-utils.png)
 
 **src/utils**
 
 Pasta que une funções auxiliares, de apoio (como limpeza de string ou detecção da resolução).
 
+![App](https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-05-app.png)
+
 **src/App.js e src/App.css**
 
 Componente principal, a partir do qual são renderizados os demais.
 
+![Index](https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-06-index.png)
+
 **index.js e index.css**
 
 Arquivo macro, que inclui inclusive a App. Nele se encontra a `div#root` .
+
+![Routes](https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-07-routes.png)
 
 **src/routes.js**
 
@@ -146,9 +160,44 @@ _**Vitrine**_
 
 Componente destinado a exibir resumos (ou previews) de posts. Esse componente deve receber uma categoria ou tópico para buscar e exibir seus artigos. Pode ou não receber o parâmetro `topic` (se receber, exibe os posts filtrados, caso contrário, exibe todos eles).
 
+Tanto para funções que retornam todos os registros, quanto para as funções de auxílio (em `src/api` para filtragem de registros), os tópicos são recebidos em arrays de objetos com essa formatação:
+
+``` json
+{
+    "id": 1,
+    "icon": "",
+    "image": "",
+    "description": "Artigos sobre Components",
+    "tags": "react|components|reactJS",
+    "title": "Components",
+    "slug": "components"
+}
+```
+
 _**Artigo**_
 
 Exibe os detalhes de um post - além de vitrines específicas dos outros artigos do mesmo tópico e links rápidos para os outros tópicos (através do componente Vitrine).
+
+O artigo é recebido nesse formato (tanto pelo Artigo quando pelo Card, componente a ser criado posteriormente):
+
+``` json
+{
+    "id": 5,
+    "author": "Marcelo Diament",
+    "categoryId": 2,
+    "categoryName": "JSX",
+    "createdAt": "01/11/2020",
+    "description": "Artigo sobre Lint para JSX",
+    "excerpt": "Artigo sobre Lint para JSX",
+    "image": "",
+    "intro": "Artigo sobre Lint para JSX",
+    "link": "/jsx/jsx-lint",
+    "slug": "jsx-lint",
+    "tags": "react|JSX|reactJS|x",
+    "title": "JSX Lint",
+    "updatedAt": "02/11/2020"
+}
+```
 
 ## Passo 04 | Componente Card
 
