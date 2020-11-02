@@ -1,8 +1,12 @@
 import React from 'react'
+import PageHeader from '../../components/PageHeader'
 
 const ArtigoPage = () => {
   return (
-    <h1>Artigo Page</h1>
+    <>
+      <PageHeader title="Página Artigo" intro="Página destinada a um artigo específico (detalhes)" />
+      <h1>Artigo Page</h1>
+    </>
   )
 }
 
