@@ -1,0 +1,61 @@
+.article-item {
+  background-color: var(--chumbo);
+  border-radius: 8px;
+  margin: 16px auto;
+  padding: 16px;
+}
+
+.article-item .article-item-header .article-item-header-title {
+  margin-bottom: 0;
+}
+
+.article-item .article-item-header .article-item-header-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  margin: 16px 0;
+  max-height: 20vh;
+  min-height: 215px;
+  overflow: hidden;
+}
+
+.article-item .article-item-header .article-item-header-intro {
+  margin: 0 0 16px;
+}
+
+.article-item .article-item-header .article-item-header-category {
+  margin: 0;
+}
+
+.article-item .article-item-divisor {
+  border-color: rgba(0, 183, 255, .8);
+  margin: 8px 0;
+}
+
+.article-item .article-item-content-meta {
+  color: var(--cinza);
+  font-size: 14px;
+  font-style: italic;
+}
+
+.article-item .article-item-content-tldr {
+  background-color: var(--chumbo-azulado);
+  border: 1px solid rgba(0, 183, 255, .2);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.article-item .article-item-content-tldr-subtitle {
+  color: var(--branco);
+  margin: 0;
+}
+
+.article-item .article-excerpt {
+  color: var(--azul);
+}
+
+.article-item-footer {
+  height: 48px;
+  padding: 16px 0;
+}
