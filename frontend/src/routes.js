@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './components/Header'
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,7 +13,6 @@ import ArtigoPage from './pages/ArtigoPage'
 const Routes = () => {
   return (
     <Router>
-      <Route path="/" component={Header} />
       <main className="main">
         <Switch>
           <Route path="/sobre" component={SobrePage} />

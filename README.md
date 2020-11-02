@@ -38,4 +38,36 @@ Agora precisamos definir nossas rotas (qual URL carrega que componente). Em segu
 
 _**Importando nosso componente Routes**_
 
-Dentro do `App.js` , vamos importar o componente Routes ( `routes.js` , criado no passo anterior)
+Dentro do `App.js` , vamos importar o componente Routes ( `routes.js` , criado no passo anterior).
+
+_**Criando as páginas**_
+
+Conforme declaramos nas rotas (trecho de código mais abaixo), precisamos criar cada um desses componentes/páginas. Vamos começar pela pasta `pages`.
+
+``` js
+< Route path = "/sobre"
+component = {
+    SobrePage
+}
+/> <
+Route exact path = "/topicos/:topico/:artigo"
+component = {
+    ArtigoPage
+}
+/> <
+Route exact path = "/topicos/:topico"
+component = {
+    TopicoPage
+}
+/> <
+Route exact path = "/topicos"
+component = {
+    TopicosPage
+}
+/> <
+Route path = "/"
+component = {
+    HomePage
+}
+/>
+```
