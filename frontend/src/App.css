@@ -37,7 +37,7 @@ body,
   color: var(--azul);
   margin: 96px 0 0;
   min-height: calc(100vh - 96px);
-  padding: 16px;
+  padding: 48px 16px 16px;
   transition: color .01s linear 0;
 }
 
