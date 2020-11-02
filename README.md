@@ -108,3 +108,11 @@ Nessa branch serão criados componentes básicos como uma vitrine de cards, o ca
 **PageHeader - cabeçalho de página**
 
 Basicamente criamos o componente, o preparamos para receber um título e uma introdução e criamos seu estilo. Então importamos o componente nas páginas do projeto.
+
+**Vitrine**
+
+Componente destinado a exibir resumos (ou previews) de posts. Esse componente deve receber uma categoria ou tópico para buscar e exibir seus artigos. Pode ou não receber o parâmetro `topic` (se receber, exibe os posts filtrados, caso contrário, exibe todos eles).
+
+**Artigo**
+
+Exibe os detalhes de um post - além de vitrines específicas dos outros artigos do mesmo tópico e links rápidos para os outros tópicos (através do componente Vitrine).
