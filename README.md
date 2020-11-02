@@ -42,7 +42,7 @@ Dentro do `App.js` , vamos importar o componente Routes ( `routes.js` , criado n
 
 _**Criando as páginas**_
 
-Conforme declaramos nas rotas (trecho de código mais abaixo), precisamos criar cada um desses componentes/páginas. Vamos começar pela pasta `pages`.
+Conforme declaramos nas rotas (trecho de código mais abaixo), precisamos criar cada um desses componentes/páginas. Vamos começar pela pasta `pages` .
 
 ``` jsx
 < Route path = "/sobre"
@@ -71,3 +71,28 @@ component = {
 }
 />
 ```
+
+**Criando um Header comum**
+
+Para termos o exato mesmo header em qualquer página, vamos criar o componente (em `src/components/Header` , salvando o `index.js` e seu respectivo estilo - `style.css` ).
+
+**Criando funções de apoio/utilidade**
+
+A primeira função de apoio que criaremos será a `cleanString()` : ela receberá um parâmetro obrigatório - a `string` - e outros 2 opcionais ( `spaceToHyphen` (default `false` ) e `keepHyphen` = (default `true` ), a primeira transforma espaços em hífens e a segunda mantém ou remove os hífens da string). A função é assim:
+
+``` js
+const cleanString = (string, spaceToHyphen = false, keepHyphen = true) => {
+    let stringClean = string
+        .replace(/á|ä|â|à|ã/gi, 'a')
+        .replace(/é|ë|ê|è/gi, 'e')
+        .replace(/í|ï|î|ì/gi, 'i')
+        .replace(/ó|ö|ô|ò|õ/gi, 'o')
+        .replace(/ú|ü|û|ù/gi, 'u')
+        .replace(/ç/gi, 'c')
+        .toLowerCase()
+    let stringHyphenKeep = !keepHyphen ? stringClean.replace(/-/gi, '') : stringClean
+    stringClean = spaceToHyphen ? stringHyphenKeep.replace(/\s/gi, '-') : stringHyphenKeep.replace(/\s/gi, '')
+    return stringClean
+}
+```
+Como exportaremos outras funções auxiliares posteriormente, a exportamos assim: `export { cleanString }`. Logo, para utilizá-la basta fazer a importação assim: `import { cleanString } from './utils'` (de acordo com o caminho até o arquivo).
