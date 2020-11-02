@@ -4,6 +4,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom'
+import Header from './components/Header'
 import HomePage from './pages/HomePage'
 import SobrePage from './pages/SobrePage'
 import TopicosPage from './pages/TopicosPage'
@@ -13,6 +14,7 @@ import ArtigoPage from './pages/ArtigoPage'
 const Routes = () => {
   return (
     <Router>
+      <Route path="/" component={Header} />
       <main className="main">
         <Switch>
           <Route path="/sobre" component={SobrePage} />

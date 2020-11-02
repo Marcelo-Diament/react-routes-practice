@@ -44,7 +44,7 @@ _**Criando as páginas**_
 
 Conforme declaramos nas rotas (trecho de código mais abaixo), precisamos criar cada um desses componentes/páginas. Vamos começar pela pasta `pages`.
 
-``` js
+``` jsx
 < Route path = "/sobre"
 component = {
     SobrePage
