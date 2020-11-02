@@ -116,3 +116,9 @@ Componente destinado a exibir resumos (ou previews) de posts. Esse componente de
 **Artigo**
 
 Exibe os detalhes de um post - além de vitrines específicas dos outros artigos do mesmo tópico e links rápidos para os outros tópicos (através do componente Vitrine).
+
+## Passo 04 | Componente Card
+
+**Branch: feature/003-Card-Component**
+
+Vamos 'quebrar' o componente Vitrine em mais um componente, Card. Ele receberá um artigo através da Vitrine e exibirá seu resumo em um card.
