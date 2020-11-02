@@ -1,4 +1,4 @@
-# react-routes-practice
+# React Routes Practice
 
 Prática para melhor compreensão do pacote **react-router-dom**. O projeto consiste em um **blog** simples.
 
@@ -119,6 +119,15 @@ Exibe os detalhes de um post - além de vitrines específicas dos outros artigos
 
 ## Passo 04 | Componente Card
 
-**Branch: feature/003-Card-Component**
+**Branch: feature/004-Card-Component**
 
 Vamos 'quebrar' o componente Vitrine em mais um componente, Card. Ele receberá um artigo através da Vitrine e exibirá seu resumo em um card.
+
+
+## Passo 05 | Detect Device
+
+**Branch: feature/005-detectDevice-helper**
+
+Para melhorarmos nosso projeto, antes vamos incluir a feature 'detectDevice' - que reconhece a largura disponível para o site e é atualizada a cada alteração no tamanho da tela reservada ao site.
+
+Para detectarmos a real largura da tela, utilizaremos a propriedade `innerWidth` da `window` e compararemos com alguns breakpoits por nós definidos - ao compararmos a `innerWidth` com nossos breakpoints, definimos o dispositivo em uso (de acordo com a largura/resolução, e não com o dispositivo de fato). Para mantermos os valores atualizados, adicionaremos um `eventListener` atrelado ao evento do tipo `resize` da `window`.
