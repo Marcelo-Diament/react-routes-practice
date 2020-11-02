@@ -12,7 +12,7 @@ Essa branch/passo tem como responsabilidade a **instalação das dependências**
 
 Certifique-se que possui o **node.js** instalado em seu ambiente local. Execute `node -v` no terminal de sua perferência para verificar a versão instalada.
 
-!['Versão node']('https://github.com/Marcelo-Diament/react-routes-practice/blob/main/passo-a-passo-01-01-versao-node.png')
+!['Versão node']('https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-01-versao-node.png')
 
 Então devemos criar o projeto react com o comando `npx create-react-app frontend` (sendo 'frontend' o nome do projeto/pasta que será criado).
 
@@ -28,7 +28,39 @@ Com isso estamos prontos para prosseguirmos. Antes de mergearmos com a branch ma
 
 Essa branch/passo tem como responsabilidade a **estruturação inicial do projeto** (separar as rotas de páginas, de componentes...).
 
-Organizaremos cada 'setor' do nosso projeto, organizando os passos por commits (para maior facilidade na hora de revisarmos o que foi feito).
+!['Estrutura']('https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-estrutura.png')
+
+> Organizaremos cada 'setor' do nosso projeto, organizando os passos por commits (para maior facilidade na hora de revisarmos o que foi feito).
+
+Basicamente a estrutura consiste nas pastas:
+
+**src/api**
+
+Onde serão armazenados arquivos que interajam com API e executem requests. No caso tempos arquivos JSON com conteúdo de marcação, por enquanto.
+
+**src/components**
+
+Pasta dos componentes, que serão (re)utilizados em diferentes páginas e componentes do projeto.
+
+**src/pages**
+
+Local das páginas, que serão chamadas de acordo com as rotas e renderizarão os respectivos componentes.
+
+**src/utils**
+
+Pasta que une funções auxiliares, de apoio (como limpeza de string ou detecção da resolução).
+
+**src/App.js e src/App.css**
+
+Componente principal, a partir do qual são renderizados os demais.
+
+**index.js e index.css**
+
+Arquivo macro, que inclui inclusive a App. Nele se encontra a `div#root` .
+
+**src/routes.js**
+
+Componente responsável pelas rotas do projeto.
 
 _**Estilo default**_
 
@@ -74,11 +106,11 @@ component = {
 />
 ```
 
-**Criando um Header comum**
+_**Criando um Header comum**_
 
 Para termos o exato mesmo header em qualquer página, vamos criar o componente (em `src/components/Header` , salvando o `index.js` e seu respectivo estilo - `style.css` ).
 
-**Criando funções de apoio/utilidade**
+_**Criando funções de apoio/utilidade**_
 
 A primeira função de apoio que criaremos será a `cleanString()` : ela receberá um parâmetro obrigatório - a `string` - e outros 2 opcionais ( `spaceToHyphen` (default `false` ) e `keepHyphen` = (default `true` ), a primeira transforma espaços em hífens e a segunda mantém ou remove os hífens da string). A função é assim:
 
@@ -97,7 +129,8 @@ const cleanString = (string, spaceToHyphen = false, keepHyphen = true) => {
     return stringClean
 }
 ```
-Como exportaremos outras funções auxiliares posteriormente, a exportamos assim: `export { cleanString }`. Logo, para utilizá-la basta fazer a importação assim: `import { cleanString } from './utils'` (de acordo com o caminho até o arquivo).
+
+Como exportaremos outras funções auxiliares posteriormente, a exportamos assim: `export { cleanString }` . Logo, para utilizá-la basta fazer a importação assim: `import { cleanString } from './utils'` (de acordo com o caminho até o arquivo).
 
 ## Passo 03 | Componentes Básicos
 
@@ -105,15 +138,15 @@ Como exportaremos outras funções auxiliares posteriormente, a exportamos assim
 
 Nessa branch serão criados componentes básicos como uma vitrine de cards, o card, um cabeçalho padrão para as páginas e um componente de artigo (que posteriormente poderemos quebrar em pedaços menores).
 
-**PageHeader - cabeçalho de página**
+_**PageHeader - cabeçalho de página**_
 
 Basicamente criamos o componente, o preparamos para receber um título e uma introdução e criamos seu estilo. Então importamos o componente nas páginas do projeto.
 
-**Vitrine**
+_**Vitrine**_
 
 Componente destinado a exibir resumos (ou previews) de posts. Esse componente deve receber uma categoria ou tópico para buscar e exibir seus artigos. Pode ou não receber o parâmetro `topic` (se receber, exibe os posts filtrados, caso contrário, exibe todos eles).
 
-**Artigo**
+_**Artigo**_
 
 Exibe os detalhes de um post - além de vitrines específicas dos outros artigos do mesmo tópico e links rápidos para os outros tópicos (através do componente Vitrine).
 
@@ -123,13 +156,12 @@ Exibe os detalhes de um post - além de vitrines específicas dos outros artigos
 
 Vamos 'quebrar' o componente Vitrine em mais um componente, Card. Ele receberá um artigo através da Vitrine e exibirá seu resumo em um card.
 
-
 ## Passo 05 | Detect Device
 
 **Branch: feature/005-detectDevice-helper**
 
 Para melhorarmos nosso projeto, antes vamos incluir a feature 'detectDevice' - que reconhece a largura disponível para o site e é atualizada a cada alteração no tamanho da tela reservada ao site.
 
-Para detectarmos a real largura da tela, utilizaremos a propriedade `innerWidth` da `window` e compararemos com alguns breakpoits por nós definidos - ao compararmos a `innerWidth` com nossos breakpoints, definimos o dispositivo em uso (de acordo com a largura/resolução, e não com o dispositivo de fato). Para mantermos os valores atualizados, adicionaremos um `eventListener` atrelado ao evento do tipo `resize` da `window`.
+Para detectarmos a real largura da tela, utilizaremos a propriedade `innerWidth` da `window` e compararemos com alguns breakpoits por nós definidos - ao compararmos a `innerWidth` com nossos breakpoints, definimos o dispositivo em uso (de acordo com a largura/resolução, e não com o dispositivo de fato). Para mantermos os valores atualizados, adicionaremos um `eventListener` atrelado ao evento do tipo `resize` da `window` .
 
 _Nessa branch também resolvemos um pequeno bug causado por um link inexistente._
