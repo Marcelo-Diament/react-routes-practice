@@ -12,7 +12,7 @@ Essa branch/passo tem como responsabilidade a **instalação das dependências**
 
 Certifique-se que possui o **node.js** instalado em seu ambiente local. Execute `node -v` no terminal de sua perferência para verificar a versão instalada.
 
-!['Versão node']('https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-01-versao-node.png')
+![Versão node](https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-01-versao-node.png)
 
 Então devemos criar o projeto react com o comando `npx create-react-app frontend` (sendo 'frontend' o nome do projeto/pasta que será criado).
 
@@ -28,7 +28,7 @@ Com isso estamos prontos para prosseguirmos. Antes de mergearmos com a branch ma
 
 Essa branch/passo tem como responsabilidade a **estruturação inicial do projeto** (separar as rotas de páginas, de componentes...).
 
-!['Estrutura']('https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-estrutura.png')
+![Estrutura](https://raw.githubusercontent.com/Marcelo-Diament/react-routes-practice/main/passo-a-passo-01-02-estrutura.png)
 
 > Organizaremos cada 'setor' do nosso projeto, organizando os passos por commits (para maior facilidade na hora de revisarmos o que foi feito).
 
